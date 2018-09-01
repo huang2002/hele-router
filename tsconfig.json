@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "declaration": true,
+        "declarationDir": "./typings",
+        "composite": true,
+        "outDir": "./raw",
+        "rootDir": "./src",
+        "jsx": "react",
+        "jsxFactory": "createElement",
+        "strict": true,
+        "noUnusedLocals": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "baseUrl": "./node_modules/",
+        "paths": {
+            "hele": [
+                "hele/index.d.ts"
+            ]
+        }
+    },
+    "include": [
+        "src"
+    ]
+}

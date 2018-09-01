@@ -1,0 +1,51 @@
+{
+    "name": "hele-router",
+    "description": "Declarative routing for hele.",
+    "version": "0.1.0",
+    "main": "dist/hele-router.umd.min.js",
+    "module": "dist/hele-router.min.js",
+    "types": "index.d.ts",
+    "scripts": {
+        "prebuild": "rd /q /s dist typings raw || exit 0",
+        "build": "tsc && rollup -c",
+        "postbuild": "terser dist/hele-router.js --config-file terser.json --module -o dist/hele-router.min.js && terser dist/hele-router.umd.js --config-file terser.json -o dist/hele-router.umd.min.js",
+        "test": "node test/server.js"
+    },
+    "license": "MIT",
+    "author": "3h",
+    "repository": "huang2002/hele-router",
+    "bugs": {
+        "url": "https://github.com/huang2002/hele-router/issues"
+    },
+    "homepage": "https://github.com/huang2002/hele-router#readme",
+    "keywords": [
+        "hele",
+        "router",
+        "declarative",
+        "routing",
+        "history",
+        "hash",
+        "switch",
+        "route",
+        "link",
+        "3h"
+    ],
+    "files": [
+        "dist",
+        "typings",
+        "index.d.ts"
+    ],
+    "devDependencies": {
+        "3h-router": "^2.0.4",
+        "@babel/core": "^7.0.0",
+        "@babel/preset-env": "^7.0.0",
+        "hele": "^0.16.0",
+        "rollup": "^0.65.0",
+        "rollup-plugin-babel": "^4.0.2",
+        "terser": "^3.8.2",
+        "typescript": "^3.0.3"
+    },
+    "peerDependencies": {
+        "hele": ">=0.12"
+    }
+}
